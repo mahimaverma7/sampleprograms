@@ -1,0 +1,4 @@
+c:\users\mahima\documents\visual studio 2010\Projects\Registration\Registration\bin\Registration.dll
+c:\users\mahima\documents\visual studio 2010\Projects\Registration\Registration\bin\Registration.pdb
+c:\users\mahima\documents\visual studio 2010\Projects\Registration\Registration\obj\Debug\Registration.dll
+c:\users\mahima\documents\visual studio 2010\Projects\Registration\Registration\obj\Debug\Registration.pdb
