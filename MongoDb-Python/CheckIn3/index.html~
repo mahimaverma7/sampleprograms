@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WELCOME TO PATIENT PORTAL</title>
+    <style type="text/css">
+      body {font-family:sans-serif;color:#4f494f;}
+      form input {border-radius : 7.5px;}
+      h5 {display :inline;}
+      .lable {text-align : right}
+      .guestbook {float:left ; padding-top : 10px;}
+      .name {width:100%; float:left; Padding:3px;}
+      .wrapper {padding-left : 25px;padding-top :20px}
+
+    </style>
+    <script type="text/javascript">
+      
+ function checkEmail() {
+
+    var email = document.getElementById('txtEmail');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+ }
+
+
+
+    
+    </script>
+    
+
+    
+</head>
+
+  <body>
+    <div class="wrapper">
+      <h1><center>Enter Patients Visit</center></h1>
+      <div class="new_input">
+	<center>
+	<form method="post" class="form" action="/newpatient" method='post' onsubmit="return checkEmail();">
+	      Name: <input size="100" type="text" id="txtname" name="name" placeholder="Enter Patient  Name" required/></br></br>
+	      Email: <input size="100" id="txtEmail" type="text" name="email" placeholder="Enter Patients Email Address" /></br></br>
+	      Address: <input size="100" type="text" id="txtadd" name="address" placeholder="Enter Patients Address" required/></br></br>
+	      
+	      Dieases: <input size="100" type="text" id="txtdieases" name="dieases" placeholder="Reason Of Visit" required/></br></br>
+
+	      Age: <input size="3" type="number" id="txtage" name="age" placeholder="Enter Patients Age" required/></br></br>
+	            <input type="submit" id="submit" value='Add Patient'  />
+		          </form>
+	</center>
+      </div>
+      <div class="newpatients">
+	<h3>Patients:</h3>
+	%for name in new_patients :
+	<div class="name">
+
+	  <h5>NAME:</h5>{{name['name']}},
+	      <h5>EMAIL:</h5>{{name['email']}},
+	      <h5>ADDRESS:</h5>{{name['address']}},
+	      <h5>Dieases:</h5>{{name['dieases']}}
+	      
+	       <h5>AGE:</h5>{{name['age']}},
+
+	      
+		  </div>
+	%end
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WELCOME TO THE ADMIN PANNEL</title>
+    <style type="text/css">
+      body {font-family:sans-serif;color:#4f494f;}
+      form input {border-radius : 7.5px;}
+      h5 {display :inline;}
+      .lable {text-align : right}
+      .name {width:100%; float:left; Padding:3px;}
+      .wrapper {padding-left : 25px;padding-top :20px}
+    
+    </style>
+   <script type='text/javascript'>
+function checkform(){
+    if(document.getElementById("txtId").value == 'admin' && document.getElementById("txtPass").value == 'admin' ){
+        alert("Login Successful");
+       
+    }else{
+        alert("Access denied. Valid username and password is required.");
+    }
+}
+</script>
+  
+    
+</head>
+
+  <body>
+    <div class="wrapper">
+      <h1><center>PLEASE LOGIN HERE TO UPDATE DOCTORS</center></h1>
+      <div class="login">
+	<center>
+	  <form method="post" class="form" action="index.html"  method='post' onsubmit="return checkform(this);">
+	  Enter Admin ID : <input type="text" id="txtId" placeholder="Enter Admin Id"/>
+	  Enter Admin Pass : <input type="password" id="txtPass" placeholder="Enter Admin Password"/>
+	   <input type="submit" id="btnsubmit" value="Login"/>
+	  </form>
+	</center>
+      </div>
+     </div>
+  </body>
+
+</html>
