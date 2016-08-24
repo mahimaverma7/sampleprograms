@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function display() {
+            var people = {
+                "p1": {
+                    "name": "Prasad D",
+                    "getName": function () {
+                        return this.name;
+                    }
+                },
+                "p5": {
+                    "name": "Prasad D",
+                    "getName": function () {
+                        return this.name;
+                    }
+                },
+                "p2": {
+                    "name": "Harsha Vardhan",
+                    "age": 39,
+                    "getName": function () {
+                        return this.name;
+                    }
+                },
+                "p3": {
+                    "NAME": "Anna Smith",
+                    "age": "24",
+                    "getName": function () {
+                        return this.NAME;
+                    }
+                },
+                "p4": {
+                    "name": "Peter Jones",
+                    "age": null,
+                    "getName": function () {
+                        return this.name;
+                    }
+                },
+                "p6": {
+                "name": "Peter Jones",
+                "age": null,
+                "getName": function () {
+                    return this.name;
+                }
+            }
+
+            }
+            alert(people.p1.name);
+            alert(Object.keys(people).length);
+            var a = Object.keys(people).valueOf(people);
+            alert(a.valueOf(name));
+           alert( Object.keys(a).valueOf(a));
+
+
+
+        }
+    </script>
+
+</head>
+<body onload="display()">
+<label id="first1"></label>
+</body>
+</html>

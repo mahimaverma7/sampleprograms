@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function displaytime() {
+            var d = new Date()
+            var date=d.getMonth() + "/" + d.getDate() + "/" + d.getYear();
+            date = date + "  " + d.getHours( )+ ":" + d.getMinutes() + ":" + d.getSeconds();
+            document.getElementById('datetime').innerHTML = date;
+        }
+    </script>
+</head>
+<body onload="displaytime();">
+<label id="datetime"></label>
+</body>
+</html>

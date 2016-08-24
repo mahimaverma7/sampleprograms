@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binanry to Decimals</title>
+    <script type="text/javascript">
+        function b2d(){
+            var bintodec = document.getElementById('txtinput').value;
+            bintodec = parseInt(bintodec,2);
+            //in java script parseint is the function to convert the number according to the base specified.
+            //in this case it is 2.
+            alert(bintodec);
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="txtinput" placeholder="Enter a number to convert">
+<input type="button" name="convert" onclick="b2d();" value="Convert"/>
+
+</body>
+</html>

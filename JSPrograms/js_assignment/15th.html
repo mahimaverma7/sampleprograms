@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function dash() {
+            var d = "0 - 22 1985--324";
+            var  betletters = "-";
+            d = d.replace(/[^\/\d]/g,'');
+            alert(d);
+            d1 = d.substring(0,6);
+            d2 = d.substring(6,10);
+            var a1 =  d1.match(/.{1,3}/g);
+            alert(a1);
+            var a2 =  d2.match(/.{1,2}/g);
+            alert(a2);
+
+            result = a1.concat(a2).join(betletters);
+            alert(result);
+
+        }
+
+    </script>
+</head>
+<body>
+
+<button onclick="dash();"> Dashed </button>
+<label id="dispdash"></label>
+</body>
+</html>

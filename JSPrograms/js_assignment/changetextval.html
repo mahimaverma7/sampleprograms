@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function displaytext() {
+            var firstname = document.getElementById("fname").value;
+            var lastname = document.getElementById("lname").value;
+            document.getElementById("gettxtval").innerText = firstname + " "+lastname;
+
+
+        }
+
+    </script>
+</head>
+<br>
+<input type="text" placeholder="Enter First Name" id="fname">
+<input type="text" placeholder="Enter Last Name" id="lname">
+<button id="gettxt" onclick="displaytext()">Display</button></br></br>
+<label id="gettxtval"></label>
+</body>
+</html>

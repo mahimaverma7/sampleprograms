@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        function insertrow() {
+            var table = document.getElementById("table1");
+            var row = table.insertRow(3);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "New Row Col1";
+            cell2.innerHTML = "New Row Col2";
+        }
+    </script>
+</head>
+
+<body>
+<table id="table1" border="1" bgcolor="aqua">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr>
+        <td>Mahima</td>
+        <td>Verma</td>
+    </tr>
+    <tr>
+        <td>Yash</td>
+        <td>Verma</td>
+    </tr>
+
+</table>
+<button id="insert" onclick="insertrow();">Insert Row</button>
+</body>
+</html>
