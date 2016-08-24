@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WELCOME TO THE PORTAL</title>
+    <style type="text/css">
+      body {font-family:sans-serif;color:#4f494f;}
+      form input {border-radius : 7.5px;}
+      h5 {display :inline;}
+      .lable {text-align : right}
+      .guestbook {float:left ; padding-top : 10px;}
+      .name {width:100%; float:left; Padding:3px;}
+      .wrapper {padding-left : 25px;padding-top :20px}
+
+    </style>
+
+    
+</head>
+
+  <body>
+    <div class="wrapper">
+      <h1>New Users</h1>
+      <div class="guestbook_input">
+	<form method="post" class="form" action="/newguest" method='post'>
+	        Name: <input type="text" name="name" required/></br></br>
+		      Email: <input type="text" name="email" required/></br></br>
+		      Address: <input type="text" name="address" required/></br></br>
+		      Password: <input type="password" name="password" required/></br></br>
+
+		            <input type="submit" value='Add Guest'/>
+			              </form>
+
+      </div>
+      <div class="gestbook">
+	<h3>Exisiting Users:</h3>
+	%for name in new_users:
+	<div class="name">
+	        <h5>NAME:</h5>{{name['name']}},
+		      <h5>EMAIL:</h5>{{name['email']}},
+		            <h5>ADDRESS:</h5>{{name['address']}},
+			          <h5>PASSWORD:</h5>{{name['password']}},
+				    </div>
+	%end
+      </div>
+    </div>
+  </body>
+
+</html>
